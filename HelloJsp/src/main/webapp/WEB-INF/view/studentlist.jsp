@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Book List</title>
+<title>Student List</title>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -20,9 +20,10 @@
 	<div class="container">
 		<h3> Students Directory</h3>
 		<a href="add" class="btn btn-primary btn-sm mb-3">Add Student</a>
-		<table class="table table-bordered table-striped">
+		<table class="table table-bordered table-striped" border ="1">
 			<thead  class="thead-dark">
 				<tr>
+					<th>Student_ID</th>
 					<th>Name</th>
 					<th>Department</th>
 					<th>Country</th>
@@ -32,6 +33,7 @@
 			<tbody>
 				<c:forEach items="${studentModel}" var="student">
 					<tr>
+					<td>${student.id}</td>
 					<td>${student.name}</td>
 					<td>${student.department}</td>
 					<td>${student.country}</td>
